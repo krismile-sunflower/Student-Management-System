@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: rgb(173,216,230);
+            width: 500px;
+            height: 500px;
+            margin-top: 10%;
+            margin-left: 10%;
+            border: pink 2px solid;
+            border-radius: 10%;
+            padding: 20px;
+        }
+        #box1{
+            background-color: rgb(255,192,203);
+            position: relative;
+            width: 200px;
+            height: 100px;
+            left: 30px;
+            top: 20px;
+            border: black 3px dashed;
+            z-index: 1;
+        }
+        #box2{
+            background-color: rgb(0,128,0);
+            width: 150px;
+            height: 100px;
+            color: red;
+            font-size: 10px;
+            padding-top: 30px;
+            box-sizing:border-box;
+            margin-bottom: 20px;
+        }
+        #box3{
+            background-color: rgb(255,255,255);
+            width: 150px;
+            height: 100px;
+            font-size: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        相对于游览器窗口左边10%，上边10%  宽500px，高500px  边框：宽2px，颜色pink，实线，圆角  内边距20px
+        <div id="box1">
+            相对于父级容器左边30px，上边20px  宽200px，高100px  边框：高3px  颜色black，虚线
+        </div>
+        <div id="box2">
+            宽150px  高100px  字体大小10px，字体颜色红色  上内边距30px（保持总高度=height=100px） 下外边距20px
+        </div>
+        <div id="box3">
+            大小与绿色相同，上边距20px（注意观察绿色容器与当前容器的外边距）
+        </div>
+        <!-- box2设置的下外边距和box3设置的上边距相重合 -->
+    </div>
+</body>
+</html>
